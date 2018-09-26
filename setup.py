@@ -5,7 +5,7 @@ setup(
     version='1.0.0',
     packages=find_packages(),
     include_package_data=True,
-    url='https://gitlab.com/lduros/quartet_templates',
+    url='https://gitlab.com/serial-lab/quartet_templates',
     license='GPLv3',
     author='SerialLab Corp',
     author_email='slab@serial-lab.com',

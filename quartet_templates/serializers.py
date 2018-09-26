@@ -12,9 +12,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 # Copyright 2018 SerialLab Corp.  All rights reserved.
-
-from quartet_templates import models
 from rest_framework.serializers import ModelSerializer
+from quartet_templates import models
+
 
 
 class TemplateSerializer(ModelSerializer):

@@ -25,7 +25,7 @@ class TemplateTest(TestCase):
    </soapenv:Body>
 </soapenv:Envelope>
         '''
-        template = create_template(name="Test Template", content=content, description="A Test Template")
+        template = self.create_template(name="Test Template", content=content, description="A Test Template")
         self.assertTrue(isinstance(template, models.Template))
 
     def test_template_rendering(self):
@@ -39,7 +39,7 @@ class TemplateTest(TestCase):
    </soapenv:Body>
 </soapenv:Envelope>
         '''
-        template = create_template(name="Test Template", content=content, description="A Test Template")
+        template = self.create_template(name="Test Template", content=content, description="A Test Template")
         rendered = template.render(context={"something_special": "Special Value"})
         expected = '''
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:bla:bla">
@@ -52,4 +52,3 @@ class TemplateTest(TestCase):
 </soapenv:Envelope>
         '''
         self.assertEqual(expected, rendered)
-        
