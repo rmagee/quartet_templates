@@ -17,4 +17,3 @@ from quartet_templates.routers import urlpatterns as route_patterns
 
 app_name = 'quartet_templates'
 urlpatterns = route_patterns
-

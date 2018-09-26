@@ -31,4 +31,3 @@ class Template(models.Model):
         '''
         template = TemplateClass(self.content)
         return template.render(Context(context))
-        

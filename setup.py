@@ -11,7 +11,7 @@ setup(
     author_email='slab@serial-lab.com',
     description='Template package for QU4RTET',
     keywords=('seriallab, quartet '
-             'level-4 quartet'),
+              'level-4 quartet'),
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
