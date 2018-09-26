@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
-    "quartet_templates"
+    "quartet_templates.apps.QuartetTemplatesConfig"
 ]
 
 SITE_ID = 1
