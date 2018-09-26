@@ -37,7 +37,7 @@ Add it to your `INSTALLED_APPS`:
 
 Run the migrations in your QU4RTET directory:
 
-... code-block:: text
+.. code-block:: text
 
      python manage.py migrate quartet_templates
 
