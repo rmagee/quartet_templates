@@ -14,6 +14,7 @@ class Template(models.Model):
         null=False,
         blank=False,
         db_index=True,
+        unique=True,
         help_text="A name to identify this template")
     content = models.TextField(
         null=False,
