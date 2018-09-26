@@ -22,7 +22,6 @@ Install QU4RTET TEMPLATES
 .. code-block:: text
 
     pip install quartet_templates
-    python manage.py migrate quartet_templates
 
 
 Add it to your `INSTALLED_APPS`:
@@ -34,6 +33,13 @@ Add it to your `INSTALLED_APPS`:
         'quartet_templates',
         ...
     )
+
+
+Run the migrations in your QU4RTET directory:
+
+... code-block:: text
+
+     python manage.py migrate quartet_templates
 
 
 Add quartet_templates URL patterns:
