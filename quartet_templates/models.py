@@ -1,6 +1,6 @@
 from django.db import models
-from django.template import Context, Template as TemplateClass
-
+from jinja2 import Template as TemplateClass
+from jinja2.environment import Environment
 
 class Template(models.Model):
     '''
@@ -25,10 +25,16 @@ class Template(models.Model):
         null=True,
         blank=True)
 
-    def render(self, context):
+    def render(self, context, environment: Environment = None):
         '''
         Renders the template passing a dictionary of key/value pairs
         in the context parameter.
         '''
-        template = TemplateClass(self.content)
-        return template.render(Context(context))
+        if not environment:
+            environment = Environment(
+                trim_blocks=True,
+                lstrip_blocks=True,
+                autoescape=True
+            )
+        template = environment.from_string(self.content)
+        return template.render(context)

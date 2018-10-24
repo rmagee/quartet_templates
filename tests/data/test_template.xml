@@ -1,0 +1,5 @@
+<ids>
+    {% for serial_number in data %}
+        <id>{{ serial_number }}</id>
+    {% endfor %}
+</ids>
