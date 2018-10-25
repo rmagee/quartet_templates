@@ -11,3 +11,4 @@ django
 djangorestframework
 django-filter
 python-dateutil
+quartet_capture
