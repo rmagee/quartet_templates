@@ -12,3 +12,4 @@ djangorestframework
 django-filter
 python-dateutil
 quartet_capture
+jinja2
