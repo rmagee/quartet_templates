@@ -34,11 +34,13 @@ class TemplateStep(Step):
                   "Looking up Template...", template_name)
         template = Template.objects.get(name=template_name)
         self.info("Found template...rendering...")
-        return template.render({'data':data, 'rule_context': rule_context,
+        data = template.render({'data':data, 'rule_context': rule_context,
                                 'step_parameters':self.parameters,
                                 'task_parameters':self.get_task_parameters(
                                     rule_context
                                 )})
+        self.info("Template response summary %s:", data[:10000])
+        return data
 
     @property
     def declared_parameters(self):
