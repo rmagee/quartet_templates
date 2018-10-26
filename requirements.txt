@@ -1,4 +1,3 @@
 django
 djangorestframework
-quartet_capture
-
+jinja2
