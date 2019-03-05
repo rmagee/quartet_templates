@@ -38,3 +38,12 @@ class Template(models.Model):
             )
         template = environment.from_string(self.content)
         return template.render(context)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Templates'
+        verbose_name = 'Template'
+        ordering = ['name']
+
