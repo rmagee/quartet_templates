@@ -1,5 +1,4 @@
 from django.db import models
-from jinja2 import Template as TemplateClass
 from jinja2.environment import Environment
 
 class Template(models.Model):

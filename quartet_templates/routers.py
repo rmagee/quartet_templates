@@ -21,7 +21,7 @@ router = DefaultRouter()
 router.register(
     r'templates',
     views.TemplateViewSet,
-    base_name="templates"
+    basename="templates"
 )
 
 urlpatterns = router.urls
