@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sites",
     "quartet_capture.apps.QuartetCaptureConfig",
-    "quartet_templates.apps.QuartetTemplatesConfig"
+    "quartet_templates.apps.QuartetTemplatesConfig",
+    "quartet_output"
 ]
 
 SITE_ID = 1
