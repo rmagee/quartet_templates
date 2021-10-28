@@ -15,4 +15,15 @@ quartet_capture
 quartet_output
 jinja2
 EPCPyYes
-
+coreschema
+coreapi
+celery
+lxml
+haikunator
+django-filter
+python-dateutil
+eparsecis
+quartet_epcis
+drf-yasg
+# djangorestframework-xml
+-e git://github.com/rmagee/django-rest-framework-xml.git#egg=djangorestframework-xml
