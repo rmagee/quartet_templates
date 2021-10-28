@@ -14,10 +14,4 @@
 # Copyright 2020 SerialLab Corp.  All rights reserved.
 
 
-from django.test import TestCase
-from quartet_capture.tasks import execute_rule
-from quartet_capture.models import Task, Rule, Step, StepParameter
 
-
-class TestTemplates(TestCase):
-    pass

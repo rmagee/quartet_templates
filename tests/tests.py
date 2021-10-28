@@ -1,5 +1,6 @@
 import os
 from django.test import TestCase
+from django.db.utils import IntegrityError
 from quartet_templates import models
 from quartet_capture.models import Rule, Step, Task, StepParameter
 from quartet_capture.rules import Rule as CRule
@@ -49,14 +50,6 @@ class TemplateTest(TestCase):
 </soapenv:Envelope>
         '''
         self.assertEqual(expected, rendered)
-
-    def test_steps(self):
-        vals = range(1000000,1000100)
-        self._create_test_template()
-        db_rule, db_task, db_step = self._create_rule()
-        c_rule = CRule(db_task.rule, db_task)
-        c_rule.execute(vals)
-        print(c_rule.data)
         
     def _create_rule(self):
         db_rule = Rule()
