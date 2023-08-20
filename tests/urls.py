@@ -16,12 +16,12 @@
 
 from __future__ import unicode_literals, absolute_import
 
-from django.conf.urls import url, include
+from django.urls import re_path, include
 
 from quartet_templates.urls import urlpatterns as quartet_templates_urls
 
-app_name = 'quartet_templates'
+app_name = "quartet_templates"
 
 urlpatterns = [
-    url(r'^', include(quartet_templates_urls)),
+    re_path(r"^", include(quartet_templates_urls)),
 ]
